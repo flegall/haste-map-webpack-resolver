@@ -1,6 +1,8 @@
+// volontary written in ES5, so that it works with Node 4.x
 var HasteMap = require('jest-haste-map');
 
-function buildResolver(rootPath) {
+function buildResolver(configuration) {
+    var rootPath = configuration.rootPath;
     var hasteMapPromise = new HasteMap({
         "extensions": [
           "snap",

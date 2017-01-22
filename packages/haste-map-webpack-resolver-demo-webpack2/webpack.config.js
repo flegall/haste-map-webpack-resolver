@@ -1,3 +1,4 @@
+// volontary written in ES5, so that it works with Node 4.x
 var path = require('path');
 var webpack = require('webpack');
 var ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -34,7 +35,9 @@ module.exports = {
         ],
     },
     resolve: {
-        plugins: [buildResolver(path.resolve(__dirname, '.'))],
+        plugins: [buildResolver({
+            rootPath: path.resolve(__dirname, '.'),
+        })],
     },
     plugins: [
         new webpack.BannerPlugin(
