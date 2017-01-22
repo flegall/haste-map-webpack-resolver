@@ -1,6 +1,6 @@
 {
   "name": "haste-map-webpack-resolver",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A webpack resolver plugin using facebook's haste-map",
   "main": "index.js",
   "repository": "https://github.com/flegall/haste-map-webpack-resolver",
