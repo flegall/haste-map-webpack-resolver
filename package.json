@@ -1,0 +1,16 @@
+{
+  "name": "haste-map-webpack-resolver",
+  "version": "0.0.0",
+  "description": "A webpack resolver plugin using facebook's haste-map",
+  "main": "index.js",
+  "repository": "https://github.com/flegall/haste-map-webpack-resolver.git",
+  "author": "Florent Le Gall <florent.legall@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "2.0.0-beta.32"
+  },
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "test": "lerna run test"
+  }
+}
