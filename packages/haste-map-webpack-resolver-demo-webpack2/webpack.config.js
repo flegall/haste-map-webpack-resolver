@@ -2,7 +2,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var ProgressBarPlugin = require('progress-bar-webpack-plugin');
-var buildResolver = require('haste-map-webpack-resolver');
+var HasteMapWebPackResolver = require('haste-map-webpack-resolver');
 
 var currentDir = path.resolve(__dirname, '.');
 
@@ -35,7 +35,7 @@ module.exports = {
         ],
     },
     resolve: {
-        plugins: [buildResolver({
+        plugins: [new HasteMapWebPackResolver({
             rootPath: path.resolve(__dirname, '.'),
         })],
     },
