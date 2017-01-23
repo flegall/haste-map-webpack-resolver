@@ -5,6 +5,11 @@ A webpack resolver plugin using facebook's haste map.
 
 If like me, you're tired of relative paths for module imports and would like to use facebook's haste map in webpack, now you can !
 
+Some resources on it :
+  - https://github.com/facebook/flow/issues/2648
+  - https://github.com/facebookarchive/node-haste
+  - https://github.com/facebook/jest/tree/master/packages/jest-haste-map
+
 ## Usage in webpack 1 
 Add the following code to [your webpack configuration file](https://github.com/flegall/haste-map-webpack-resolver/blob/master/packages/haste-map-webpack-resolver-demo-webpack1/webpack.config.js):
 ```
