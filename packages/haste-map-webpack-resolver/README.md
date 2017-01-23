@@ -3,7 +3,8 @@
 # haste-map-webpack-resolver
 A webpack resolver plugin using facebook's haste map.
 
-If like me, you're tired of relative paths for module imports and would like to use facebook's haste map in webpack, now you can !
+If like me, you're tired of relative paths for module imports and would like to use facebook's haste map in webpack, now you can ! 
+Since Jest, Flow & React Native are already supporting it, having a webpack resolver is the only thing you need to use it on Node.js and on web bundles.
 
 Some resources on it :
   - https://github.com/facebook/flow/issues/2648
