@@ -11,7 +11,7 @@ Some resources on it :
   - https://github.com/facebook/jest/tree/master/packages/jest-haste-map
 
 ## Usage in webpack 1 
-Add the following code to [your webpack configuration file](https://github.com/flegall/haste-map-webpack-resolver/blob/master/packages/haste-map-webpack-resolver-demo-webpack1/webpack.config.js):
+Add the following code to [your webpack configuration file](https://github.com/flegall/haste-map-webpack-resolver/blob/master/packages/haste-map-webpack-resolver-demo-webpack/webpack.config.js):
 ```
 var HasteMapWebPackResolver = require('haste-map-webpack-resolver');
 
@@ -25,7 +25,7 @@ var HasteMapWebPackResolver = require('haste-map-webpack-resolver');
         ]),
     ],
 ```
-I've written [a fully working webpack 1 demo](https://github.com/flegall/haste-map-webpack-resolver/tree/master/packages/haste-map-webpack-resolver-demo-webpack1)
+I've written [a fully working webpack 1 demo](https://github.com/flegall/haste-map-webpack-resolver/tree/master/packages/haste-map-webpack-resolver-demo-webpack)
 
 ## Usage in webpack 2 
 Add the following code to [your webpack configuration file](https://github.com/flegall/haste-map-webpack-resolver/blob/master/packages/haste-map-webpack-resolver-demo-webpack2/webpack.config.js):
