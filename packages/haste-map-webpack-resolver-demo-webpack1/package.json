@@ -1,5 +1,5 @@
 {
-  "name": "haste-map-webpack-resolver-demo-webpack",
+  "name": "haste-map-webpack-resolver-demo-webpack2",
   "version": "1.0.0",
   "description": "A webpack resolver plugin using facebook's haste-map",
   "main": "index.js",
@@ -18,7 +18,7 @@
     "jest": "^18.1.0",
     "progress-bar-webpack-plugin": "^1.9.3",
     "source-map-support": "^0.4.10",
-    "webpack": "^2.2.0"
+    "webpack": "^1.14.0"
   },
   "scripts": {
     "postinstall": "npm run webpack",
