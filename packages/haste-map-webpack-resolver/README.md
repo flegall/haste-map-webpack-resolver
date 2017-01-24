@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/flegall/haste-map-webpack-resolver.svg?branch=master)](https://travis-ci.org/flegall/haste-map-webpack-resolver)
+[![Build Status](https://travis-ci.org/flegall/haste-map-webpack-resolver.svg?branch=master)](https://travis-ci.org/flegall/haste-map-webpack-resolver) [![npm version](https://badge.fury.io/js/haste-map-webpack-resolver.svg)](https://badge.fury.io/js/haste-map-webpack-resolver)
 
 # haste-map-webpack-resolver
 A webpack resolver plugin using facebook's haste map.
@@ -9,7 +9,7 @@ This can be a pain in mono-repositories:
   - referencing a module requires some relative path computation (very often trial and error).
   - when moving files to different folders, most require() calls have to be updated.
 
-Facebook's Haste map can be useful for that, each module is assigned a unique name using the @providesModule annotation that can be required() by its name.
+Facebook's Haste map can be useful for that, each module is assigned a unique name using the @providesModule annotation and can be required() using its name.
 
 Since Jest, Flow & React Native are already supporting it, having a webpack resolver is the last thing you need to use it on node.js and on web bundles.
 
