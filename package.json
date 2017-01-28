@@ -14,6 +14,7 @@
     "publish": "yarn run build && lerna publish",
     "lerna": "lerna",
     "postinstall": "yarn run build",
+    "pretest": "yarn run build",
     "test": "lerna run test"
   }
 }
