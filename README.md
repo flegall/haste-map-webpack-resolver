@@ -38,6 +38,8 @@ var hasteMapWebPackResolver = new HasteMapWebPackResolver({
 ```
 I've written [a fully working webpack 1 demo](https://github.com/flegall/haste-map-webpack-resolver/tree/master/packages/haste-map-webpack-resolver-demo-webpack)
 
+**Beware this configuration is only valid for haste-map-webpack-resolver 2.x**: in order to handle https://github.com/flegall/haste-map-webpack-resolver/issues/2 I had to break the configuration of 1.x. If you're still using 1.x, please READ the configuration from here : https://github.com/flegall/haste-map-webpack-resolver/blob/v1.0.8/README.md
+
 ## Usage in webpack 2
 Add the following code to [your webpack configuration file](https://github.com/flegall/haste-map-webpack-resolver/blob/master/packages/haste-map-webpack-resolver-demo-webpack2/webpack.config.js):
 ```
@@ -56,3 +58,6 @@ var hasteMapWebPackResolver = new HasteMapWebPackResolver({
     ],
 ```
 I've written [a fully working webpack 2 demo](https://github.com/flegall/haste-map-webpack-resolver/tree/master/packages/haste-map-webpack-resolver-demo-webpack2)
+
+
+**Beware this configuration is only valid for haste-map-webpack-resolver 2.x**: in order to handle https://github.com/flegall/haste-map-webpack-resolver/issues/2 I had to break the configuration of 1.x. If you're still using 1.x, please READ the configuration from here : https://github.com/flegall/haste-map-webpack-resolver/blob/v1.0.8/README.md
