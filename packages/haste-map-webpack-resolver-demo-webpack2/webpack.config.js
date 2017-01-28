@@ -6,6 +6,10 @@ var HasteMapWebPackResolver = require('haste-map-webpack-resolver');
 
 var currentDir = path.resolve(__dirname, '.');
 
+var hasteMapWebPackResolver = new HasteMapWebPackResolver({
+    rootPath: path.resolve(__dirname, '.'),
+});
+
 module.exports = {
     context: currentDir,
     entry: './entry-point.js',
@@ -35,9 +39,7 @@ module.exports = {
         ],
     },
     resolve: {
-        plugins: [new HasteMapWebPackResolver({
-            rootPath: path.resolve(__dirname, '.'),
-        })],
+        plugins: [hasteMapWebPackResolver.resolver],
     },
     plugins: [
         new webpack.BannerPlugin(
@@ -48,5 +50,6 @@ module.exports = {
             }
         ),
         new ProgressBarPlugin(),
+        hasteMapWebPackResolver,
     ],
 };

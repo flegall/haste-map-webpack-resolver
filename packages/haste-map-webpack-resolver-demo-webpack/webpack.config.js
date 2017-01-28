@@ -6,6 +6,10 @@ var HasteMapWebPackResolver = require('haste-map-webpack-resolver');
 
 var currentDir = path.resolve(__dirname, '.');
 
+var hasteMapWebPackResolver = new HasteMapWebPackResolver({
+    rootPath: path.resolve(__dirname, '.'),
+});
+
 module.exports = {
     context: currentDir,
     entry: './entry-point.js',
@@ -33,11 +37,7 @@ module.exports = {
     plugins: [
         new webpack.BannerPlugin('require("source-map-support").install();',
                                  { raw: true, entryOnly: false }),
-        new ProgressBarPlugin(),
-        new webpack.ResolverPlugin([
-            new HasteMapWebPackResolver({
-                rootPath: path.resolve(__dirname, '.'),
-            })
-        ]),
+        new ProgressBarPlugin(hasteMapWebPackResolver),
+        new webpack.ResolverPlugin([hasteMapWebPackResolver.resolver]),
     ],
 };

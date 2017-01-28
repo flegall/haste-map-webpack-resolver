@@ -3,7 +3,7 @@
 # haste-map-webpack-resolver
 A webpack resolver plugin using facebook's haste map.
 
-In CommonJS all require() calls to internal modules are using relative paths. 
+In CommonJS all require() calls to internal modules are using relative paths.
 
 This can be a pain in mono-repositories:
   - referencing a module requires some relative path computation (very often trial and error).
@@ -18,39 +18,41 @@ Some resources on it :
   - https://github.com/facebook/flow/issues/2648
   - https://github.com/facebookarchive/node-haste
   - https://github.com/facebook/jest/tree/master/packages/jest-haste-map
-  
+
 This implementation is based on jest-haste-map, the haste map implementation used by Jest runner.
 
-## Usage in webpack 1 
+## Usage in webpack 1
 Add the following code to [your webpack configuration file](https://github.com/flegall/haste-map-webpack-resolver/blob/master/packages/haste-map-webpack-resolver-demo-webpack/webpack.config.js):
 ```
 var HasteMapWebPackResolver = require('haste-map-webpack-resolver');
+var hasteMapWebPackResolver = new HasteMapWebPackResolver({
+    rootPath: path.resolve(__dirname, '.'),
+});
 
     ....
     // Within the configuration object:
     plugins: [
-        new webpack.ResolverPlugin([
-            new HasteMapWebPackResolver({
-                rootPath: path.resolve(__dirname, '.'),  // The root directory
-            })
-        ]),
+        new ProgressBarPlugin(hasteMapWebPackResolver),
+        new webpack.ResolverPlugin([hasteMapWebPackResolver.resolver]),
     ],
 ```
 I've written [a fully working webpack 1 demo](https://github.com/flegall/haste-map-webpack-resolver/tree/master/packages/haste-map-webpack-resolver-demo-webpack)
 
-## Usage in webpack 2 
+## Usage in webpack 2
 Add the following code to [your webpack configuration file](https://github.com/flegall/haste-map-webpack-resolver/blob/master/packages/haste-map-webpack-resolver-demo-webpack2/webpack.config.js):
 ```
 var HasteMapWebPackResolver = require('haste-map-webpack-resolver');
+var hasteMapWebPackResolver = new HasteMapWebPackResolver({
+    rootPath: path.resolve(__dirname, '.'),
+});
 
     ....
     // Within the configuration object:
     resolve: {
-        plugins: [new HasteMapWebPackResolver({
-            rootPath: path.resolve(__dirname, '.'), // The root directory
-        })],
+        plugins: [hasteMapWebPackResolver.resolver],
     },
+    plugins: [
+        hasteMapWebPackResolver,
+    ],
 ```
 I've written [a fully working webpack 2 demo](https://github.com/flegall/haste-map-webpack-resolver/tree/master/packages/haste-map-webpack-resolver-demo-webpack2)
-
-
