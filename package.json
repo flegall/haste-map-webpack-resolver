@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "lerna bootstrap",
-    "publish": "yarn run build && lerna publish",
+    "publish": "yarn run build && yarn test && lerna publish",
     "lerna": "lerna",
     "postinstall": "yarn run build",
     "pretest": "yarn run build",
