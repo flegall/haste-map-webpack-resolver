@@ -10,8 +10,10 @@
     "lerna": "2.0.0-beta.32"
   },
   "scripts": {
+    "build": "lerna bootstrap",
+    "publish": "yarn run build && lerna publish",
     "lerna": "lerna",
-    "postinstall": "lerna bootstrap",
+    "postinstall": "yarn run build",
     "test": "lerna run test"
   }
 }
