@@ -1,6 +1,6 @@
 {
   "name": "haste-map-provider",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple frontend over jest-haste-map",
   "main": "index.js",
   "repository": "https://github.com/flegall/haste-map-webpack-resolver",

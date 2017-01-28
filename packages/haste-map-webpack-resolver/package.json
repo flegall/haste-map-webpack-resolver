@@ -1,13 +1,13 @@
 {
   "name": "haste-map-webpack-resolver",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A webpack resolver plugin using facebook's haste-map",
   "main": "index.js",
   "repository": "https://github.com/flegall/haste-map-webpack-resolver",
   "author": "Florent Le Gall <florent.legall@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "haste-map-provider": "^2.0.0"
+    "haste-map-provider": "^2.0.1"
   },
   "scripts": {
     "prepublish": "cp ../../README.md .",
