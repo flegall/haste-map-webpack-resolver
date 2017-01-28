@@ -1,8 +1,7 @@
-// @flow
 // volontary written in ES5, so that it works with Node 4.x
 var HasteMapBuilder = require('jest-haste-map');
 
-function HasteMapResolverPlugin(configuration /* : Object */) {
+function HasteMapResolverPlugin(configuration) {
     this._configuration = configuration;
     this._hasteMapPromise = null;
 
